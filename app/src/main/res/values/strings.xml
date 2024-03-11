@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Face Detection</string>
+    <string name="capture">Capture</string>
+    <string name="set2">set2</string>
+    <string name="set1">set1</string>
+    <string name="user_1_image">User 1 image</string>
+    <string name="compare">Compare</string>
+    <string name="user_2_image">user 2 image</string>
+</resources>
