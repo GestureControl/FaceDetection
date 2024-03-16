@@ -35,7 +35,7 @@ public class FaceRecognitionModel {
 
     public float[] getEmbeddings(Bitmap bitmap) throws IOException {
         float[][][][] inputArray = preprocessInput(bitmap);
-        Log.i("inputArray", "getEmbeddings: "+inputArray);
+        Log.i("inputArray1", "getEmbeddings: "+inputArray[0][1][1][0]);
         float[][] output = new float[1][192]; // Adjusted output size to match the model's output shape
         interpreter.run(inputArray, output);
         return output[0];
