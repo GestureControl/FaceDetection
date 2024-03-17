@@ -19,7 +19,7 @@ jobs:
           distribution: 'adopt'
 
       - name: Gradle build
-        uses: ./gradlew build
+        uses: gradle/actions@v3.1.0
 
       - name: upload build Artifact
         uses: actions/upload-artifact@v3.1.3
