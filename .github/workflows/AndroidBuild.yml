@@ -15,8 +15,8 @@ jobs:
       - name: Setup Java JDK\
         uses: actions/setup-java@v3.13.0
         with:
-          java-version: '21'
-          distribution: 'Zulu'
+          java-version: '17'
+          distribution: 'adopt'
 
       - name: Gradle build
         uses: ./gradlew build
