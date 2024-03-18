@@ -18,8 +18,11 @@ jobs:
           java-version: '17'
           distribution: 'adopt'
 
+      - name: Setup gradle
+        uses: gradle/gradle-build-action@v3
+
       - name: Gradle build
-        uses: gradlew/actions@v3.1.0
+        uses: ./gradlew build
 
       - name: upload build Artifact
         uses: actions/upload-artifact@v3.1.3
