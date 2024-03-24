@@ -6,6 +6,7 @@ import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.drawable.BitmapDrawable
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
@@ -23,6 +24,10 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
     private val REQUEST_CAMERA = 10
 
+    private  var x : String? = null
+
+    private lateinit var Y : String
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,6 +35,19 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         with(binding) {
+
+            val result = 10 / 0
+            Y = result.toString()
+            val biometricUtils = BiometricUtils(this@MainActivity)
+
+            if (biometricUtils.isBiometricSupported() && Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+                    biometricUtils.showBiometricPrompt("Biometric Authentication","Log in using your biometric credentials","Please authenticate using your fingerprint or face.")
+
+            } else {
+                // Biometric authentication is not supported on this device
+                // Handle the case accordingly
+                Toast.makeText(this@MainActivity.applicationContext, "Biometric authentication is not supported on this device", Toast.LENGTH_SHORT).show()
+            }
 
             set1.setOnClickListener {
                 startCamera()

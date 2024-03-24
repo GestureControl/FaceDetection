@@ -52,6 +52,10 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
+//    test runner & rules
+    androidTestImplementation ("androidx.test:runner:1.5.2")
+    androidTestImplementation ("androidx.test:rules:1.5.0")
+
 // fACE dETECTION tENSORfLOW & mLkIT
     implementation ("com.google.mlkit:face-detection:16.1.6")
     implementation ("org.tensorflow:tensorflow-lite:2.4.0")
@@ -78,7 +82,12 @@ dependencies {
         implementation ("androidx.camera:camera-mlkit-vision:1.4.0-alpha04")
         // If you want (to additionally use the CameraX Extensions library)
         implementation ("androidx.camera:camera-extensions:1.4.0-alpha04")
-    
+
+    // biometric api
+    implementation ("androidx.biometric:biometric:1.1.0")
+
+
+
 
 
 
