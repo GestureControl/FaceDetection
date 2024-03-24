@@ -12,7 +12,7 @@ object CrashReporter {
     fun init(context: Context) {
         val defaultHandler = Thread.getDefaultUncaughtExceptionHandler()
         setDefaultUncaughtExceptionHandler { thread, throwable ->
-            thread.uncaughtExceptionHandler.uncaughtException(throwable)
+            thread.uncaughtExceptionHandler.uncaughtException(thread,throwable)
             handleException(throwable)
             defaultHandler?.uncaughtException(thread, throwable)
         }
