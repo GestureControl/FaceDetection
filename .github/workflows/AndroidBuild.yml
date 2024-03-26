@@ -52,6 +52,11 @@ jobs:
         with:
           gradle-home-cache-cleanup: true
 
+      - name: Debug Workflow Environment
+        run: |
+            echo "Current Directory: $(pwd)"
+            ls 
+
 
       - name: Enable KVM
         run: |
@@ -65,8 +70,5 @@ jobs:
           api-level: 29
           script: ./gradlew connectedCheck
 
-      - name: Debug Workflow Environment
-        run: |
-          echo "Current Directory: $(pwd)"
-          ls 
+
 
