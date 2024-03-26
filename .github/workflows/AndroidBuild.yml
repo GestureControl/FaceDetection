@@ -1,9 +1,9 @@
 name: AndroidBuild
 on:
   pull_request:
-    branches : [master]
+    branches : [FD_v1.0.1]
   push:
-    branches : [master]
+    branches : [FD_v1.0.1]
 
 jobs:
   build:
@@ -22,7 +22,7 @@ jobs:
         uses: gradle/gradle-build-action@v3
 
       - name: Grant execute permissions for gradlew //this step is only for macOS
-        run: chmod +x ./gradlew 
+        run: chmod +x ./gradlew
 
       - name: Build with Gradle
         run: ./gradlew build

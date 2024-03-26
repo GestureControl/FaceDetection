@@ -2,8 +2,8 @@ name: DeviceTest
 
 on:
   push:
-    branches:
-      - main
+    branches: [FD_v1.0.1]
+
 
 jobs:
   test:
