@@ -68,5 +68,5 @@ jobs:
       - name: Debug Workflow Environment
         run: |
           echo "Current Directory: $(pwd)"
-          ls -la \app\build\outputs\apk\debug\
+          ls 
 
