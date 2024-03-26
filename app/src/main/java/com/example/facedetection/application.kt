@@ -13,6 +13,6 @@ class application : Application() {
 //            exitProcess(10)
 //        }
 
-        CrashReporter.init(applicationContext)
+        CrashReporter.init()
     }
 }

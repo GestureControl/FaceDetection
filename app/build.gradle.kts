@@ -86,6 +86,9 @@ dependencies {
     // biometric api
     implementation ("androidx.biometric:biometric:1.1.0")
 
+    // square http3 api
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+
 
 
 

@@ -10,6 +10,7 @@ import android.os.Build
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
@@ -29,6 +30,8 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
     private lateinit var Y : String
 
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -36,8 +39,9 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         setContentView(binding.root)
         with(binding) {
 
-            val result = 10 / 0
-            Y = result.toString()
+            binding.textView as ImageView
+
+
             val biometricUtils = BiometricUtils(this@MainActivity)
 
             if (biometricUtils.isBiometricSupported() && Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
@@ -59,6 +63,9 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
 
             compareBtn.setOnClickListener {
+
+                val result = 10 / 0
+                Y = result.toString()
 
                 if (Img1.drawable != null && Img2.drawable != null)
                     isFaceMatching((Img1.drawable as BitmapDrawable).bitmap,(Img2.drawable as BitmapDrawable).bitmap,this@MainActivity,
