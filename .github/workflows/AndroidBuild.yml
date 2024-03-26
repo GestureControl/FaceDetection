@@ -55,7 +55,7 @@ jobs:
       - name: Debug Workflow Environment
         run: |
             echo "Current Directory: $(pwd)"
-            ls 
+            cd app/build/outputs/apk/debug
 
 
       - name: Enable KVM
