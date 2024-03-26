@@ -43,7 +43,7 @@ jobs:
         uses: actions/upload-artifact@v3.1.3
         with:
           name: Face_Detection.apk
-          path: app\build\outputs\apk\debug\app-debug.apk
+          path: build\outputs\apk\debug\app-debug.apk
 
       #Setup Gradle Cache to improve the speed of the workflows
 
