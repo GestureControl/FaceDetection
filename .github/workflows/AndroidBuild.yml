@@ -65,4 +65,8 @@ jobs:
           api-level: 29
           script: ./gradlew connectedCheck
 
+      - name: Debug Workflow Environment
+        run: |
+          echo "Current Directory: $(pwd)"
+          ls -la \app\build\outputs\apk\debug\
 
