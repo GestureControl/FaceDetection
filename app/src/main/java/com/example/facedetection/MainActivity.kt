@@ -39,7 +39,6 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         setContentView(binding.root)
         with(binding) {
 
-            binding.textView as ImageView
 
 
             val biometricUtils = BiometricUtils(this@MainActivity)
@@ -64,8 +63,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
             compareBtn.setOnClickListener {
 
-                val result = 10 / 0
-                Y = result.toString()
+
 
                 if (Img1.drawable != null && Img2.drawable != null)
                     isFaceMatching((Img1.drawable as BitmapDrawable).bitmap,(Img2.drawable as BitmapDrawable).bitmap,this@MainActivity,

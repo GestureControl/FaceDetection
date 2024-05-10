@@ -21,7 +21,7 @@ class ExampleUnitTest {
         val emb2 : FloatArray? = null
         val result = calculateCosineSimilarity(emb1,emb2)
 
-        assertEquals(0f,result)
+        assertEquals(null,result)
     }
 
     @Test
