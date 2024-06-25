@@ -48,6 +48,8 @@ dependencies {
     implementation("com.google.android.material:material:1.11.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("androidx.camera:camera-lifecycle:1.3.2")
+    implementation("com.google.android.gms:play-services-mlkit-text-recognition-common:19.0.0")
+    implementation("com.google.android.gms:play-services-mlkit-text-recognition:19.0.0")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
@@ -88,6 +90,12 @@ dependencies {
 
     // square http3 api
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
+
+    // OCR Document Scanner
+    implementation ("com.google.android.gms:play-services-mlkit-document-scanner:16.0.0-beta1")
+
+    // Gson library
+    implementation("com.google.code.gson:gson:2.8.7")
 
 
 

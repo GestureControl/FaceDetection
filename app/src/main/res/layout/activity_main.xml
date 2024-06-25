@@ -36,18 +36,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.774" />
 
-    <SurfaceView
-        android:id="@+id/surfaceView"
-        android:layout_width="180dp"
-        android:layout_height="180dp"
-        app:layout_constraintBottom_toTopOf="@+id/compareBtn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.134"
-        android:visibility="invisible"/>
-
     <ImageView
         android:id="@+id/Img2"
         android:layout_width="180dp"
@@ -59,17 +47,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.542"
         app:layout_constraintStart_toEndOf="@+id/Img1"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/captureBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/capture"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:visibility="invisible"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/surfaceView" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.541" />
 
     <Button
         android:id="@+id/set1"
@@ -78,10 +57,10 @@
         android:text="@string/set1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/Img1"
-        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintHorizontal_bias="0.564"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/Img1"
-        app:layout_constraintVertical_bias="0.264" />
+        app:layout_constraintVertical_bias="0.097" />
 
     <Button
         android:id="@+id/set2"
@@ -90,10 +69,10 @@
         android:text="@string/set2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.398"
+        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="@id/Img2"
         app:layout_constraintTop_toBottomOf="@id/Img2"
-        app:layout_constraintVertical_bias="0.264" />
+        app:layout_constraintVertical_bias="0.097" />
 
     <TextView
         android:id="@+id/textView"
@@ -103,5 +82,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/OCR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OCR"
+        android:backgroundTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/compareBtn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

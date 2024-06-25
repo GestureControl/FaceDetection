@@ -1,6 +1,7 @@
 package com.example.facedetection
 
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
@@ -10,6 +11,7 @@ import android.os.Build
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
@@ -39,6 +41,9 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         setContentView(binding.root)
         with(binding) {
 
+            OCR.setOnClickListener {
+                documentReader(this@MainActivity,OCR)
+            }
 
 
             val biometricUtils = BiometricUtils(this@MainActivity)
@@ -96,6 +101,11 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         }
 
 
+    }
+
+    private fun documentReader(context: Context, btnView:Button) {
+        val intent = Intent(context,DocumentReader::class.java)
+        startActivity(intent)
     }
 
     /* private fun isFaceMatching(selectedFace: Bitmap, capturedFace: Bitmap) {
